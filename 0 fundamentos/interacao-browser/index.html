@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+       Há 3 funções específicas do navegador para interagir com o usuário:
+        
+        * alert()
+        // Apenas mostra uma mensagem.
+        
+        * prompt()
+        // Mostra uma mensagem esperando que o usuário insira um texto. 
+        // Retornará o texto inserido pelo usuário. 
+        // Ao cancelar/Esc retornará null.
+
+        * confirm()
+        // Mostra uma mensagem e espera que o usuário pressione "OK" ou "Cancelar"
+        // OK retornará "true" e Cancelar/Esc retornará "false"
+
+        Obs.: Essas funções são de contexto do navegador, isto é, só executam no navegador!
+        // Portanto, este arquivo deve ser executado no Navegador!
+
+    -->
+
+    <script>
+        // JavaScript está aqui! Dentro da tag <script>...
+
+        alert("Oi, sou um alert()!");
+
+        // prompt(title, [default]) 
+        // Colchetes na sintaxe [...] denota que é opcional, não obrigatório.
+        let retorno_do_prompt = prompt("Um prompt() aqui, insira qualquer texto ou cancele!", "(Opcional)");
+        // O retorno deste "prompt" foi armazenado dentro da variável "retorno_do_prompt"
+        console.log("Retorno do prompt: ", retorno_do_prompt); // Mensagem exibida no console
+
+        //confirm(question)
+        let retorno_do_confirm = confirm("Um confirm() aqui, dê Ok para \"true\" ou cancel/Esc para \"false\"");
+        // O retorno deste "confirm" foi armazenado dentro da variável "retorno_do_confirm"
+        console.log("Retorno do confirm ", retorno_do_confirm); // Mensagem exibida no console
+
+        alert(
+            `Sou um alert() e sirvo apenas para te mostrar uma mensagem!\n
+            O prompt() retorna o texto do usuário ou "null"(Cancel/Esc)\n
+            O confirm() retorna "true" ou "false"(Cancel/Esc)\n
+            Confira os retornos no CONSOLE do seu navegador.\n 
+            "F12" no Crome/Firefox e "Ctrl + Shift + C" no Opera.`
+            )
+    </script>
+</body>
+</html>
